@@ -1,0 +1,280 @@
+/* Common Styles */
+
+/* Fontawesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Google Fonts */
+/* Baloo Da 2, Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Animation */
+@import url('animation.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Baloo Da 2', cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* End of Common Styles */
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  background-color: #1b1d1ff6;
+  position: fixed;
+  top: -8rem;
+  z-index: 10;
+  padding: 3rem;
+  transition: height .5s;
+  animation: navbar 1s .5s forwards;
+}
+
+.navbar.change {
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 4rem;
+}
+
+.logo a {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 2.5rem;
+  color: #eeeeee;
+  letter-spacing: .1rem;
+}
+
+.logo span {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #4b6294;
+}
+
+.nav-list {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+
+.change .nav-list {
+  opacity: 1;
+  visibility: visible;
+  transition: all .7s .5s;
+}
+
+.nav-link {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  color: #ffffff;
+  margin: 2rem 0;
+  transition: color .9s;
+}
+
+.nav-link:hover {
+  color: #63a0d1;
+  text-shadow: .1rem .3rem 1rem #4b6294;
+  transition: color .9s;
+}
+
+/* End of Navbar */
+
+/* Menu */
+
+.menu {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: .2rem;
+  background-color: #eeeeee;
+  transition: transform .4s;
+}
+
+.line-1 {
+  width: 50%;
+}
+
+.change .line-1 {
+  transform: translate(100%, 1rem) rotate(-35deg);
+  transform-origin: right;
+}
+
+.line-3 {
+  width: 50%;
+  margin-left: auto;
+}
+
+.change .line-3 {
+  transform: translateY(-1rem) rotate(35deg);
+  transform-origin: right;
+}
+
+/* End of Menu */
+
+/* Section 1 */
+
+.section-1 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  transition: all .5s, color .3s, opacity .5s;
+}
+
+.section-1::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: .85;
+  background: url('/res/image/back3.jpg'), repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  
+}
+
+.section-1:hover:after {
+  color: #fff;
+  opacity: .95;
+  transition: opacity .5s;
+}
+
+.bg-hover:hover {
+  box-shadow: 0 -100vh 0 0 #162838 inset;
+}
+
+.banner {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.banner-heading {
+  margin-bottom: 2rem;
+  height: 20rem;
+  perspective: 50rem;
+  overflow: hidden;
+}
+
+.banner-heading span {
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #e6e6e6;
+  text-shadow: .3rem .3rem .6rem #2c2828;
+  position: absolute;
+  display: flex;
+  justify-content: center; 
+  transform: translateZ(8rem);
+  opacity: 0;
+  letter-spacing: 3rem;
+}
+
+.banner-paragraph {
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffffee;
+  width: 50%;
+  margin: 0 auto 6rem auto;
+  padding: 1rem 0;
+  text-shadow: 0 0 1rem #383737;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeAnimation 1s 1.5s forwards;
+  position: relative;
+}
+
+.banner-paragraph::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 1rem #383737;
+}
+
+.banner-btn {
+  width: 30rem;
+  height: 6rem;
+  line-height: 6rem;
+  color: #ffffffab;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  border: .1rem solid #1c3144;
+  background: linear-gradient(to right, #344952,#273f49, #1c3144);
+  cursor: pointer;
+  transition: all .5s, color .3s;
+  text-shadow: 0 .5rem .4rem #101922;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeAnimation 1s 2s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #bce2f8, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left .5s;
+}
+
+.banner-btn:hover:before {
+  left: 100%;
+}
+
+.banner-btn:hover {
+  color: #ffffff;
+}
+
+.hover:hover {
+  box-shadow: 30rem 0 0 0 #162838 inset;
+}
+
+/* End of Section 1 */

@@ -1,0 +1,82 @@
+/* Animation Effect */
+
+/* Heading */
+
+@keyframes animateHeading {
+  0% {
+    transform: translateY(8rem);
+    opacity: 0;
+  }
+
+  3% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  28% {
+    transform: translateY(-8rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(8rem);
+    opacity: 0;
+  }
+}
+
+/* Paragraph */
+
+@keyframes fadeAnimation {
+
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+}
+
+/* Navbar */
+
+@keyframes navbar {
+  0% {
+    top: -8rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+/* End of Animation Effect */
+
+/* Effect code */
+
+.heading-1 {
+  animation: animateHeading 12s 3s infinite;
+}
+
+.heading-2 {
+  animation: animateHeading 12s 6s infinite;
+}
+
+.heading-3 {
+  animation: animateHeading 12s 9s infinite;
+}
+
+.heading-4 {
+  animation: animateHeading 12s 12s infinite;
+}
+
+/* End of Effect code */
+
+/* Paragraph */
