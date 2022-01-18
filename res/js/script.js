@@ -9,3 +9,54 @@ menu.addEventListener("click", () => {
 });
 
 // End of Navbar
+
+// Section 2 Video
+
+// event variables
+const video = document.querySelector(".video");
+const btn = document.querySelector(".buttons i");
+const bar = document.querySelector(".video-bar");
+
+// video event
+
+// play effect
+
+const playPause = () => {
+  if (video.paused) {
+    video.play();
+    btn.className = "fas fa-pause";
+    video.style.opacity = ".75";
+  } else {
+    video.pause();
+    btn.className = "fas fa-play";
+    video.style.opacity = ".35";
+  }
+};
+
+// button click event
+btn.addEventListener("click", () => {
+  playPause();
+});
+
+// time progress bar
+video.addEventListener("timeupdate", () => {
+  const current = parseFloat(video.currentTime).toFixed(1);
+  const duration = video.duration % 60;
+  const barWith = current / duration;
+  const counter = document.querySelector(".counter");
+
+  bar.style.width = `${barWith * 100}%`;
+  if (video.ended) {
+    btn.className = "fas fa-play";
+    video.style.opacity = ".35";
+  }
+
+  counter.innerText = `${current} / ${duration}`;
+  counter;
+
+  console.log("counter:", counter);
+  console.log("current : ", current);
+  console.log("duration : ", duration);
+});
+
+// Enod of Section 2 Video
