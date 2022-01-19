@@ -1,0 +1,62 @@
+/* Contact css */
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1.5rem;
+  background-color: #444444;
+  color: #eeeeee;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: .125rem;
+}
+
+.contact-form textarea {
+  max-width: 100%;
+  max-height: 15rem;
+  min-height: 5.5rem;
+  resize: none;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus
+{
+  text-shadow: 0 0 1rem #eeeeee;
+}
+
+.contact-form input:focus::placeholder {
+  color: #ffffff;
+  transition: color 1s;
+  text-shadow: 0 0 1rem #eeeeee;
+}
+
+.contact-form textarea:focus::placeholder {
+  color: #ffffff;
+  transition: color 1s;
+  text-shadow: 0 0 1rem #eeeeee;
+}
+
+.contact-form input[type="text"] {
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #383f80;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .6s;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: .25rem;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #2b3169;
+}
+
+/* End of Contact css */

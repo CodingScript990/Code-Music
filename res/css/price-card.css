@@ -1,0 +1,167 @@
+/* Section 3 Button Style */
+
+/* Card Background(Front) */
+
+.heading-free {
+  background: linear-gradient(to right, #0d2744,#193555,#235083, #1f5899);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-basic {
+  background: linear-gradient(to right, #3a2909,#553b0c,#79520b, #9b6b14);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-standard {
+  background: linear-gradient(to right, #093613,#135020,#1a752d, #1d9237);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-premium {
+  background: linear-gradient(to right, #2b092e,#521555,#6c1b74, #861691);
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Card Background(Back) */
+
+.back-free {
+  background: linear-gradient(to right, #0d2744,#193555,#235083, #1f5899);
+}
+
+.back-basic {
+  background: linear-gradient(to right, #3a2909,#553b0c,#79520b, #9b6b14);
+}
+
+.back-standard {
+  background: linear-gradient(to right, #093613,#135020,#1a752d, #1d9237);
+}
+
+.back-premium {
+  background: linear-gradient(to right, #2b092e,#521555,#6c1b74, #861691);
+}
+
+/* Card Text */
+
+.list-free li {
+  color: #03356d;
+}
+
+.list-basic li {
+  color: #442d01;
+}
+
+.list-standard li {
+  color: #01360d;
+}
+
+.list-premium li {
+  color: #37033b;
+}
+
+/* Button(Effect) */
+
+.btn-free {
+  background: linear-gradient(to right, #0d2744,#193555,#235083, #1f5899);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-free::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #c4e4f7, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left .5s;
+}
+
+.btn-free:hover:before {
+  left: 100%;
+}
+
+.btn-free:hover {
+  color: #ffffff;
+}
+
+.btn-basic {
+  background: linear-gradient(to right, #3a2909,#553b0c,#79520b, #9b6b14);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-basic::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #c4e4f7, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left .5s;
+}
+
+.btn-basic:hover::before {
+  left: 100%;
+}
+
+.btn-basic:hover {
+  color: #ffffff;
+}
+
+.btn-standard {
+  background: linear-gradient(to right, #093613,#135020,#1a752d, #1d9237);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-standard::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #c4e4f7, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left .5s;
+}
+
+.btn-standard:hover::before {
+  left: 100%;
+}
+
+.btn-standard:hover {
+  color: #ffffff;
+}
+
+.btn-premium {
+  background: linear-gradient(to right, #2b092e,#521555,#6c1b74, #861691);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #c4e4f7, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left .5s;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  color: #ffffff;
+}
+
+/* End of Section 3 price-card Style */

@@ -52,7 +52,6 @@ video.addEventListener("timeupdate", () => {
   }
 
   counter.innerText = `${current} / ${duration}`;
-  counter;
 
   console.log("counter:", counter);
   console.log("current : ", current);
@@ -60,3 +59,23 @@ video.addEventListener("timeupdate", () => {
 });
 
 // Enod of Section 2 Video
+
+// Section 3 Cards
+
+// Initialize Swiper
+
+let swiper = new Swiper(".swiper-container", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 70,
+    stretch: 10,
+    depth: 50,
+    modifier: 1,
+    slideShadows: true,
+  },
+});
+
+// End of Section 3 Cards

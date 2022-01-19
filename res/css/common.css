@@ -1,0 +1,204 @@
+/* Common Styles */
+
+/* Fontawesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Swiper CDN */
+@import url('https://unpkg.com/swiper@7/swiper-bundle.min.css');
+/* Google Fonts */
+/* Baloo Da 2, Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Main css */
+@import url('main.css');
+
+/* Animation css */
+@import url('animation.css');
+
+/* Responsive css */
+@import url('responsive.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Baloo Da 2', cursive;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.section-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10rem;
+  font-weight: 300;
+  color: #dddddd;
+  margin-right: 4rem;
+  text-shadow: 0 0 1rem #979797d7;
+}
+
+.section-heading-line {
+  width: 15rem;
+  height: .2rem;
+  background-color: #dddddd;
+  margin-right: 4rem;
+}
+
+/* End of Common Styles */
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  background-color: #1b1d1ff6;
+  position: fixed;
+  top: -8rem;
+  z-index: 10;
+  padding: 3rem;
+  transition: height .5s;
+  animation: navbar 1s .5s forwards;
+}
+
+.navbar.change {
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 4rem;
+}
+
+.logo a {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 2.5rem;
+  color: #eeeeee;
+  letter-spacing: .1rem;
+}
+
+.logo span {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #4b5294;
+}
+
+.nav-list {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+
+.change .nav-list {
+  opacity: 1;
+  visibility: visible;
+  transition: all .7s .5s;
+}
+
+.nav-link {
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  color: #ffffff;
+  margin: 2rem 0;
+  transition: color .9s;
+}
+
+.nav-link:hover {
+  color: #5f68b4;
+  text-shadow: .1rem .3rem 1rem #4b5294;
+  transition: color .9s;
+}
+
+/* End of Navbar */
+
+/* Menu */
+
+.menu {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: .2rem;
+  background-color: #eeeeee;
+  transition: transform .4s;
+}
+
+.line-1 {
+  width: 50%;
+}
+
+.change .line-1 {
+  transform: translate(100%, 1rem) rotate(-35deg);
+  transform-origin: right;
+}
+
+.line-3 {
+  width: 50%;
+  margin-left: auto;
+}
+
+.change .line-3 {
+  transform: translateY(-1rem) rotate(35deg);
+  transform-origin: right;
+}
+
+/* End of Menu */
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 12rem;
+  background-color: #313131;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.footer-nav a{
+  font-family: 'MADE Soulmaze', sans-serif;
+  font-size: 2rem;
+  color: #e6e6e6;
+  margin-right: 3rem;
+  letter-spacing: .1rem;
+  text-shadow: 0 0 1rem #eeeeee;
+  transition: color .3s;
+}
+
+.footer-nav a:hover {
+  color: #4e56a3;
+  text-shadow: 0 0 1rem #353c80;
+}
+
+.copyright {
+  font-size: 2rem;
+  color: #e6e6e6;
+  text-shadow: 0 0 1rem #eeeeee;
+}
+
+/* End of Footer */
