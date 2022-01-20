@@ -312,7 +312,7 @@
 .pricing-card {
   width: 28rem !important;
   height: 45rem !important;
-  background: linear-gradient(to top right, #414040, #464646, #4b4949,#4b4a4a, #464545);
+  background: linear-gradient(to top right, #414040, #929191, #4b4949,#a09d9d, #464545);
   border-radius: 1rem;
   box-shadow: 0 .75rem 1.25rem rgba(83, 83, 83, 0.637);
 }
